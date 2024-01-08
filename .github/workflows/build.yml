@@ -6,5 +6,5 @@ jobs:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
   
   build_manually:
-    if: github.ref != 'refs/heads/main' && github.event_name == 'workflow_dispatch'
+    if: github.ref != 'refs/heads/main' && github.event_name != 'push'
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
