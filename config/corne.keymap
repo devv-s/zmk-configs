@@ -22,21 +22,17 @@
     chain-length = <27>;
 };
 
-&mtp: mod_tap_tappreferred {
-compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <2>;
+ZMK_BEHAVIOR(mtp, hold_tap,
     flavor = "tap-preferred";
     tapping-term-ms = <300>;
     bindings = <&kp>, <&kp>;
-};
+)
 
-&ltp: layer_tap_tappreferred {
-compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <2>;
+ZMK_BEHAVIOR(ltp, hold_tap,
     flavor = "tap-preferred";
     tapping-term-ms = <300>;
     bindings = <&kp>, <&kp>;
-};
+)
 
 #define ALPH 0
 #define NUMB 1
