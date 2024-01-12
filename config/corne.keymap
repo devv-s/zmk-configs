@@ -23,36 +23,6 @@
 
 // BRUTE-FORCE APPROACH FOR HOME-ROW MODS.
 // for Left Home Rows.
-ZMK_BEHAVIOR(hrt_S, mod_morph,
-	bindings = <&kp S>, <&mt LALT>;
-	mods = <(LSHFT)>;
-)
-
-ZMK_BEHAVIOR(hrt_D, mod_morph,
-	bindings = <&kp D>, <&mt LCTRL>;
-	mods = <(LSHFT)>;
-)
-
-ZMK_BEHAVIOR(hrt_F, mod_morph,
-	bindings = <&kp F>, <&mt LCMD>;
-	mods = <(LSHFT)>;
-)
-
-// for Right Home Rows.
-ZMK_BEHAVIOR(hrt_L, mod_morph,
-	bindings = <&kp L>, <&mt RCMD>;
-	mods = <(RSHFT)>;
-)
-
-ZMK_BEHAVIOR(hrt_K, mod_morph,
-	bindings = <&kp K>, <&mt RCTRL>;
-	mods = <(RSHFT)>;
-)
-
-ZMK_BEHAVIOR(hrt_J, mod_morph,
-	bindings = <&kp J>, <&mt RALT>;
-	mods = <(RSHFT)>;
-)
 
 #define ALPH 0
 #define NUMB 1
@@ -64,13 +34,13 @@ ZMK_BEHAVIOR(hrt_J, mod_morph,
 
 ZMK_LAYER(typing_layer,
   // ╭─────────────┬─────────────┬──────────────┬──────────────┬──────────────┬─────────────╮   ╭─────────────┬──────────────┬──────────────┬──────────────┬─────────────┬─────────────╮
-          &none         &kp Q          &kp W         &kp E          &kp R          &kp T             &kp Y         &kp U          &kp I          &kp O          &kp P    &lt SYST &none
+          &none         &kp Q          &kp W         &kp E          &kp R          &kp T             &kp Y         &kp U          &kp I          &kp O          &kp P    &lt FUNC &none
   // ├─────────────┼─────────────┼──────────────┼──────────────┼──────────────┼─────────────┤   ├─────────────┼──────────────┼──────────────┼──────────────┼─────────────┼─────────────┤
-       &kp LSHFT        &kp A          &hrt_S        &hrt_D         &hrt_F         &kp G             &kp H         &hrt_J         &hrt_K         &hrt_L   	   &kp SEMI      &kp SQT
+       &kp LSHFT        &kp A          &kp S         &kp D          &kp F          &kp G             &kp H         &kp J          &kp K          &kp L   	     &kp SEMI     &kp RSHFT 
   // ├─────────────┼─────────────┼──────────────┼──────────────┼──────────────┼─────────────┤   ├─────────────┼──────────────┼──────────────┼──────────────┼─────────────┼─────────────┤
-          &none         &kp Z          &kp X         &kp C          &kp V          &kp B             &kp N         &kp M        &kp COMMA        &kp DOT       &kp FSLH     &kp RSHIFT
+          &none         &kp Z          &kp X         &kp C          &kp V          &kp B             &kp N         &kp M        &kp COMMA        &kp DOT       &kp FSLH       &none
   // ╰─────────────┼─────────────┼──────────────┼──────────────┼──────────────┼─────────────┤   ├─────────────┼──────────────┼──────────────┼──────────────┼─────────────┼─────────────╯
-                                                  &lt SYST TAB  &lt SMBL BSPC  &lt NUMB ESC      &lt NAVG RET    &kp SPACE     &lt FUNC DEL
+                                                 &lt SYST BSPC   &lt SMBL TAB  &lt NUMB ESC      &lt NAVG RET    &kp SPACE     &lt SYST DEL
   //                                            ╰──────────────┴──────────────┴─────────────╯   ╰─────────────┴──────────────┴──────────────╯
 )
 
@@ -91,7 +61,7 @@ ZMK_LAYER(symbol_layer,
   // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &none         &none         &none         &none         &none         &none           &kp GRAVE     &kp AMPS      &kp ASTRK     &kp LBKT      &kp RBKT       &none
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-  	      &none       &kp LSHFT     &kp LCTRL     &kp LALT      &kp LCMD        &none           &kp LBKT      &kp DLLR      &kp PRCNT     &kp CARET     &kp EQUAL      &none  
+  	      &none       &kp LSHFT     &kp LCTRL     &kp LALT      &kp LCMD        &none           &kp LBKT      &kp DLLR      &kp PRCNT     &kp CARET     &kp EQUAL      &kp SQT  
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &none         &none         &none         &none         &none         &none           &kp BSLH      &kp EXCL       &kp AT       &kp HASH      &kp SQT        &none
   // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
@@ -114,7 +84,7 @@ ZMK_LAYER(nav_layer,
 
 ZMK_LAYER(func_layer,
   // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          &none         &none         &none         &none         &none         &none            &kp F12       &kp F7        &kp F8        &kp F9       &kp PSCRN      &none
+          &none         &none         &none         &none         &none         &none            &kp F12       &kp F7        &kp F8        &kp F9       &kp PSCRN      &trans
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
   	      &none       &kp LSHFT     &kp LCTRL     &kp LALT      &kp LCMD        &none            &kp F11       &kp F4        &kp F5        &kp F6         &none        &none
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
