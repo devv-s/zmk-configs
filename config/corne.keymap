@@ -41,7 +41,7 @@ ZMK_BEHAVIOR(hrt_F, mod_morph,
 // for Right Home Rows.
 ZMK_BEHAVIOR(hrt_L, mod_morph,
 	bindings = <&kp L>, <&kp RCTRL>;
-	mods = <(RSHFT)>
+	mods = <(RSHFT)>;
 )
 
 ZMK_BEHAVIOR(hrt_K, mod_morph,
