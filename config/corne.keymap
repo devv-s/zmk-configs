@@ -14,6 +14,8 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/reset.h>
 #include "helper.h"
+#include "symbols.h"
+#include "keypos_42keys.h"
 
 &led_strip {
     chain-length = <27>;
@@ -22,38 +24,32 @@
 // BRUTE-FORCE APPROACH FOR HOME-ROW MODS.
 // for Left Home Rows.
 ZMK_BEHAVIOR(hrt_S, mod_morph,
-	label = home_row_key_S;
 	bindings = <&kp S>, <&kp LCTRL>;
 	mods = <(LSHFT)>;
 )
 
 ZMK_BEHAVIOR(hrt_D, mod_morph,
-	label = home_row_key_D;
 	bindings = <&kp D>, <&kp LALT>;
 	mods = <(LSHFT)>;
 )
 
 ZMK_BEHAVIOR(hrt_F, mod_morph,
-	label = home_row_key_F;
 	bindings = <&kp F>, <&kp LCMD>;
 	mods = <(LSHFT)>;
 )
 
 // for Right Home Rows.
 ZMK_BEHAVIOR(hrt_L, mod_morph,
-    	label = home_row_key_L;
 	bindings = <&kp L>, <&kp RCTRL>;
 	mods = <(RSHFT)>
 )
 
 ZMK_BEHAVIOR(hrt_K, mod_morph,
-	label = home_row_key_K,
 	bindings = <&kp K>, <&kp RALT>;
 	mods = <(RSHFT)>;
 )
 
 ZMK_BEHAVIOR(hrt_J, mod_morph,
-	label = home_row_key_J;
 	bindings = <&kp J>, <&kp RCMD>;
 	mods = <(RSHFT)>;
 )
