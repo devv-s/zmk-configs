@@ -27,6 +27,12 @@ ZMK_BEHAVIOR(qlt, hold_tap,
     bindings = <&mo>, <&kp>;
 )
 
+ZMK_BEHAVIOR(lhrm, mod_morph2,
+    tapping-term-ms = <200>;
+    bindings = <&kp>, <&kp>;
+    mods = <(MOD_LSFT)>;
+)
+
 #define ALPH 0
 #define NUMB 1
 #define SMBL 2
@@ -39,7 +45,7 @@ ZMK_LAYER(typing_layer,
   // ╭─────────────┬─────────────┬──────────────┬──────────────┬──────────────┬─────────────╮   ╭─────────────┬──────────────┬──────────────┬──────────────┬─────────────┬─────────────╮
           &none         &kp Q          &kp W         &kp E          &kp R          &kp T             &kp Y         &kp U          &kp I          &kp O          &kp P    &lt FUNC &none
   // ├─────────────┼─────────────┼──────────────┼──────────────┼──────────────┼─────────────┤   ├─────────────┼──────────────┼──────────────┼──────────────┼─────────────┼─────────────┤
-       &kp LSHFT        &kp A          &kp S         &kp D          &kp F          &kp G             &kp H         &kp J          &kp K          &kp L   	     &kp SEMI     &kp RSHFT 
+       &kp LSHFT        &kp A          &kp S     &lhrm LCTRL D      &kp F          &kp G             &kp H         &kp J          &kp K          &kp L   	     &kp SEMI     &kp RSHFT 
   // ├─────────────┼─────────────┼──────────────┼──────────────┼──────────────┼─────────────┤   ├─────────────┼──────────────┼──────────────┼──────────────┼─────────────┼─────────────┤
           &none         &kp Z          &kp X         &kp C          &kp V          &kp B             &kp N         &kp M        &kp COMMA        &kp DOT       &kp FSLH       &none
   // ╰─────────────┼─────────────┼──────────────┼──────────────┼──────────────┼─────────────┤   ├─────────────┼──────────────┼──────────────┼──────────────┼─────────────┼─────────────╯
@@ -62,11 +68,11 @@ ZMK_LAYER(num_layer,
 
 ZMK_LAYER(symbol_layer,
   // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          &none         &none         &none         &none         &none         &none           &kp GRAVE     &kp AMPS      &kp ASTRK     &kp LBKT      &kp RBKT       &none
+          &none         &none         &none         &none         &none         &none           &kp GRAVE     &kp AMPS      &kp ASTRK     &kp LPAR      &kp RPAR       &none
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-  	      &none         &none         &none         &none         &none         &none           &kp LBKT      &kp DLLR      &kp PRCNT     &kp CARET     &kp EQUAL      &kp SQT  
+          &none         &none         &none         &none         &none         &none           &kp LBKT      &kp DLLR      &kp PRCNT     &kp CARET     &kp EQUAL      &kp SQT  
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &none         &none         &none         &none         &none         &none           &kp BSLH      &kp EXCL       &kp AT       &kp HASH      &kp SQT        &none
+          &none         &none         &none         &none         &none         &none           &kp RBKT      &kp EXCL       &kp AT       &kp HASH      &kp BSLH       &none
   // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
                                                     &none         &none         &none           &kp BSPC      &kp SPACE       &none
   //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
