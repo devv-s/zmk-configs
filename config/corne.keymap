@@ -22,16 +22,43 @@
     chain-length = <27>;
 };
 
-ZMK_BEHAVIOR(mtp, hold_tap,
-    flavor = "tap-preferred";
-    tapping-term-ms = <150>;
-    bindings = <&kp>, <&kp>;
+// BRUTE-FORCE APPROACH FOR HOME-ROW MODS.
+// for Left Home Rows.
+ZMK_BEHAVIOR(hrt_S, mod_morph,
+    label = home_row_key_S,
+	bindings = <&kp S>, <&kp LCTRL>,
+	mods = <(LSHFT)>
 )
 
-ZMK_BEHAVIOR(ltp, hold_tap,
-    flavor = "tap-preferred";
-    tapping-term-ms = <150>;
-    bindings = <&kp>, <&kp>;
+ZMK_BEHAVIOR(hrt_D, mod_morph,
+    label = home_row_key_D,
+	bindings = <&kp D>, <&kp LALT>,
+	mods = <(LSHFT)>
+)
+
+ZMK_BEHAVIOR(hrt_F, mod_morph,
+    label = home_row_key_F,
+	bindings = <&kp F>, <&kp LCMD>,
+	mods = <(LSHFT)>
+)
+
+// for Right Home Rows.
+ZMK_BEHAVIOR(hrt_L, mod_morph,
+    label = home_row_key_L,
+	bindings = <&kp L>, <&kp RCTRL>,
+	mods = <(RSHFT)>
+)
+
+ZMK_BEHAVIOR(hrt_K, mod_morph,
+    label = home_row_key_K,
+	bindings = <&kp K>, <&kp RALT>,
+	mods = <(RSHFT)>
+)
+
+ZMK_BEHAVIOR(hrt_J, mod_morph,
+    label = home_row_key_J,
+	bindings = <&kp J>, <&kp RCMD>,
+	mods = <(RSHFT)>
 )
 
 #define ALPH 0
@@ -43,13 +70,13 @@ ZMK_BEHAVIOR(ltp, hold_tap,
 
 ZMK_LAYER(typing_layer,
   // ╭─────────────┬─────────────┬──────────────┬──────────────┬──────────────┬─────────────╮   ╭─────────────┬──────────────┬──────────────┬──────────────┬─────────────┬─────────────╮
-          &none         &kp Q          &kp W         &kp E          &kp R          &kp T             &kp Y         &kp U         &kp I         &kp O           &kp P     &ltp SYST &none
+          &none         &kp Q          &kp W         &kp E          &kp R          &kp T             &kp Y         &kp U          &kp I          &kp O          &kp P    &ltp SYST &none
   // ├─────────────┼─────────────┼──────────────┼──────────────┼──────────────┼─────────────┤   ├─────────────┼──────────────┼──────────────┼──────────────┼─────────────┼─────────────┤
-       &kp LSHFT        &kp A      &mtp LCTRL S   &mtp LALT D    &mtp LCMD F       &kp G             &kp H      &mtp RCMD J    &mtp RALT K    &mtp RCTRL L   &kp SEMI      &kp SQT
+       &kp LSHFT        &kp A          &hrt_S        &hrt_D         &hrt_F         &kp G             &kp H         &hrt_J         &hrt_K         &hrt_L   	   &kp SEMI      &kp SQT
   // ├─────────────┼─────────────┼──────────────┼──────────────┼──────────────┼─────────────┤   ├─────────────┼──────────────┼──────────────┼──────────────┼─────────────┼─────────────┤
-          &none         &kp Z          &kp X         &kp C          &kp V          &kp B             &kp N         &kp M        &kp COMMA       &kp DOT       &kp FSLH     &kp RSHIFT
+          &none         &kp Z          &kp X         &kp C          &kp V          &kp B             &kp N         &kp M        &kp COMMA        &kp DOT       &kp FSLH     &kp RSHIFT
   // ╰─────────────┼─────────────┼──────────────┼──────────────┼──────────────┼─────────────┤   ├─────────────┼──────────────┼──────────────┼──────────────┼─────────────┼─────────────╯
-                                                 &ltp SYST TAB  &ltp SMBL BSPC &ltp NUMB ESC     &ltp NAVG RET   &kp SPACE     &ltp FUNC DEL
+                                                  &lt SYST TAB  &lt SMBL BSPC  &lt NUMB ESC      &lt NAVG RET    &kp SPACE     &lt FUNC DEL
   //                                            ╰──────────────┴──────────────┴─────────────╯   ╰─────────────┴──────────────┴──────────────╯
 )
 
@@ -70,7 +97,7 @@ ZMK_LAYER(symbol_layer,
   // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &none         &none         &none         &none         &none         &none           &kp GRAVE     &kp AMPS      &kp ASTRK     &kp LBKT      &kp RBKT       &none
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-  	  &none       &kp LSHFT     &kp LCTRL     &kp LALT      &kp LCMD        &none           &kp LBKT      &kp DLLR      &kp PRCNT     &kp CARET     &kp EQUAL      &none  
+  	      &none       &kp LSHFT     &kp LCTRL     &kp LALT      &kp LCMD        &none           &kp LBKT      &kp DLLR      &kp PRCNT     &kp CARET     &kp EQUAL      &none  
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &none         &none         &none         &none         &none         &none           &kp BSLH      &kp EXCL       &kp AT       &kp HASH      &kp SQT        &none
   // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
@@ -82,7 +109,7 @@ ZMK_LAYER(nav_layer,
   // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &none         &none         &none         &none         &none         &none             &none         &none         &none         &none         &none        &none
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-  	  &none         &none         &none         &none         &none         &none            &kp LCMD     &kp RALT      &kp RCTRL     &kp RSHFT       &none        &none     
+  	      &none         &none         &none         &none         &none         &none            &kp LCMD     &kp RALT      &kp RCTRL     &kp RSHFT       &none        &none     
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &none         &none       &kp LEFT     &kp DOWN        &kp UP       &kp RIGHT           &none         &none         &none         &none         &none        &none
   // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
@@ -95,7 +122,7 @@ ZMK_LAYER(func_layer,
   // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &none         &none         &none         &none         &none         &none            &kp F12       &kp F7        &kp F8        &kp F9       &kp PSCRN      &none
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-  	  &none       &kp LSHFT     &kp LCTRL     &kp LALT      &kp LCMD        &none            &kp F11       &kp F4        &kp F5        &kp F6         &none        &none
+  	      &none       &kp LSHFT     &kp LCTRL     &kp LALT      &kp LCMD        &none            &kp F11       &kp F4        &kp F5        &kp F6         &none        &none
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &none         &none         &none         &none         &none         &none            &kp F10       &kp F1        &kp F2        &kp F3         &none        &none
   // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
@@ -111,7 +138,7 @@ ZMK_LAYER(system_layer,
   // ├────────────────┼────────────────┼────────────────┼────────────────┼────────────────┼────────────────┤   ├────────────────┼────────────────┼────────────────┼────────────────┼────────────────┼────────────────┤
          &sys_reset         &none            &none      &rgb_ug RGB_EFF   &ext_power EP_TOG   &bootloader         &bootloader         &none            &none            &none            &none          &to ALPH
   // ╰────────────────┼────────────────┼────────────────┼────────────────┼────────────────┼────────────────┤   ├────────────────┼────────────────┼────────────────┼────────────────┼────────────────┼────────────────╯
-  							 &rgb_ug RGB_TOG     &bl BL_TOG         &none                &none            &none            &none     
+														 &rgb_ug RGB_TOG     &bl BL_TOG         &none                &none            &none            &none     
   //                                                    ╰────────────────┴────────────────┴────────────────╯   ╰────────────────┴────────────────┴────────────────╯
 )
 
