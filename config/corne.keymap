@@ -24,33 +24,33 @@
 // BRUTE-FORCE APPROACH FOR HOME-ROW MODS.
 // for Left Home Rows.
 ZMK_BEHAVIOR(hrt_S, mod_morph,
-	bindings = <&kp S>, <&kp LCTRL>;
+	bindings = <&kp S>, <&mt LALT>;
 	mods = <(LSHFT)>;
 )
 
 ZMK_BEHAVIOR(hrt_D, mod_morph,
-	bindings = <&kp D>, <&kp LALT>;
+	bindings = <&kp D>, <&mt LCTRL>;
 	mods = <(LSHFT)>;
 )
 
 ZMK_BEHAVIOR(hrt_F, mod_morph,
-	bindings = <&kp F>, <&kp LCMD>;
+	bindings = <&kp F>, <&mt LCMD>;
 	mods = <(LSHFT)>;
 )
 
 // for Right Home Rows.
 ZMK_BEHAVIOR(hrt_L, mod_morph,
-	bindings = <&kp L>, <&kp RCTRL>;
+	bindings = <&kp L>, <&mt RCMD>;
 	mods = <(RSHFT)>;
 )
 
 ZMK_BEHAVIOR(hrt_K, mod_morph,
-	bindings = <&kp K>, <&kp RALT>;
+	bindings = <&kp K>, <&mt RCTRL>;
 	mods = <(RSHFT)>;
 )
 
 ZMK_BEHAVIOR(hrt_J, mod_morph,
-	bindings = <&kp J>, <&kp RCMD>;
+	bindings = <&kp J>, <&mt RALT>;
 	mods = <(RSHFT)>;
 )
 
@@ -77,13 +77,13 @@ ZMK_LAYER(typing_layer,
 
 ZMK_LAYER(num_layer,
   // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          &none         &none         &none         &none         &none         &none             &none       &kp KP_N7     &kp KP_N8     &kp KP_N9       &none        &none
+          &none         &none         &none         &none         &none         &none             &none         &kp N7       &kp N8        &kp N9       &none        &none
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-  	      &none       &kp LSHFT     &kp LCTRL     &kp LALT      &kp LCMD        &none             &none       &kp KP_N4     &kp KP_N5     &kp KP_N6       &none        &none
+  	      &none       &kp LSHFT     &kp LCTRL     &kp LALT      &kp LCMD        &none             &none         &kp N4       &kp N5        &kp N6       &none        &none
   // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &none         &none         &none         &none         &none         &none             &none       &kp KP_N1     &kp KP_N2     &kp KP_N3       &none        &none
+          &none         &none         &none         &none         &none         &none             &none         &kp N1       &kp N2        &kp N3       &none        &none
   // ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╯
-                                                    &none         &none         &none           &kp BSPC      &kp SPACE     &kp KP_N0
+                                                    &none         &none         &none           &kp BSPC      &kp SPACE      &kp N0
   //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
