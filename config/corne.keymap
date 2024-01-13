@@ -49,11 +49,11 @@
 #define DWN DOWN
 
 #define LAT LALT
-#define LCR LCTRL
+#define LCT LCTRL
 #define LCM LCMD
 #define LSF LSHFT
 #define RAT RALT
-#define RCR RCTRL
+#define RCT RCTRL
 #define RCM RCMD
 #define RSF RSHFT
 #define BSP BSPC
