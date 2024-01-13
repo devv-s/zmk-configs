@@ -4,18 +4,18 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors_._si>
-#include <dt-bindings/zmk/keys_._
-#include <dt-bindings/zmk/bt_._
-#include <dt-bindings/zmk/outputs_._
-#include <dt-bindings/zmk/ext_power_._
-#include <dt-bindings/led/led_._
-#include <dt-bindings/zmk/backlight_._
-#include <dt-bindings/zmk/rgb_._
-#include <dt-bindings/zmk/reset_._
-#include "helper_._
-#include "symbols_._
-#include "keypos_42keys_._
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/led/led.h>
+#include <dt-bindings/zmk/backlight.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/reset.h>
+#include "helper.h"
+#include "symbols.h"
+#include "keypos_42keys.h"
 #include "mysymbols_._
 
 &led_strip {
