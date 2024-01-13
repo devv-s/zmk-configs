@@ -42,7 +42,6 @@
 #define BSP BSPC
 #define BLK SPACE
 
-#define _._ &trans
 #define _x_ &none
 
 #define BKSPs SYST BSPC
