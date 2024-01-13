@@ -16,7 +16,7 @@
 #include "helper.h"
 #include "symbols.h"
 #include "keypos_42keys.h"
-#include "mysymbols_._
+#include "mysymbols.h"
 
 &led_strip {
     chain-length = <27>;
