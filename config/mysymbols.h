@@ -21,16 +21,15 @@
 #define RPR RPAR
 #define LBK LBKT
 #define RBK RBKT
-#define EQL EQUAL
+#define EQU EQUAL
 #define FSL FSLH
 #define BSL BSLH
 #define SMI SEMI
 #define CMM COMMA
 
-#define ← LEFT
-#define ↑ UP
-#define → RIGHT
-#define ↓ DOWN
+#define LFT LEFT
+#define RIT RIGHT
+#define DWN DOWN
 
 #define LAT LALT
 #define LCR LCTRL
@@ -41,11 +40,10 @@
 #define RCM RCMD
 #define RSF RSHFT
 #define BSP BSPC
-#define SPC SPACE
+#define BLK SPACE
 
-#define ... &trans
-#define ... &trans
-#define ___ &none
+#define _._ &trans
+#define _x_ &none
 
 #define BKSPs SYST BSPC
 #define TABs  SMBL TAB
