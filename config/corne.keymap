@@ -16,7 +16,6 @@
 #include "helper.h"
 #include "symbols.h"
 #include "keypos_42keys.h"
-#include "mysymbols.h"
 
 #define ALPH 0
 #define NUMB 1
@@ -26,6 +25,41 @@
 #define SYST 5
 #define LHRM 6
 #define RHRM 7
+
+#define GRV GRAVE
+#define XCL EXCL
+#define HSH HASH
+#define DLR DLLR
+#define PCT PRCNT
+#define CRT CARET
+#define AMP AMPS
+#define AST ASTRK
+#define LPR LPAR
+#define RPR RPAR
+#define LBK LBKT
+#define RBK RBKT
+#define EQU EQUAL
+#define FSL FSLH
+#define BSL BSLH
+#define SMI SEMI
+#define CMM COMMA
+
+#define LFT LEFT
+#define RIT RIGHT
+#define DWN DOWN
+
+#define LAT LALT
+#define LCR LCTRL
+#define LCM LCMD
+#define LSF LSHFT
+#define RAT RALT
+#define RCR RCTRL
+#define RCM RCMD
+#define RSF RSHFT
+#define BSP BSPC
+#define BLK SPACE
+
+#define _x_ &none
 
 &led_strip {
     chain-length = <27>;
@@ -39,16 +73,17 @@ ZMK_BEHAVIOR(qlt, hold_tap,
 
 ZMK_LAYER(typing_layer,
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮   ╭───────┬───────┬───────┬───────┬───────┬───────╮
-      _x_    &kp Q   &kp W   &kp E   &kp R   &kp T       &kp Y   &kp U   &kp I   &kp O   &kp P    _x_  
+     &none   &kp Q   &kp W   &kp E   &kp R   &kp T       &kp Y   &kp U   &kp I   &kp O   &kp P   &none 
 // ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────┤
     &kp LSF  &kp A   &kp S   &kp D   &kp F   &kp G       &kp H   &kp J   &kp K   &kp L  &kp SMI &kp RSF  
 // ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────┤
-&lt LHRM _x_ &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &kp M  &kp CMM &kp DOT &kp FSL &lt RHRM _x_
+&lt LHRM &none &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &kp M  &kp CMM &kp DOT &kp FSL &lt RHRM _x_
 // ╰───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────╯
            &qlt SYST BSPC &lt SMBL TAB &lt NUMB ESC     &lt NAVG RET &kp BLK &qlt SYST DEL 
 //                         ╰───────┴───────┴───────╯   ╰───────┴───────┴───────╯
 )
 
+/*
 ZMK_LAYER(num_layer,
 // ╭─────┬───────┬───────┬───────┬───────┬───────╮   ╭───────┬───────┬───────┬───────┬───────┬───────╮
      _x_    _x_     _x_     _x_     _x_     _x_         _x_    &kp N7  &kp N8  &kp N9   _x_     _x_  
@@ -111,13 +146,13 @@ ZMK_LAYER(system_layer,
 )
 
 ZMK_LAYER(left_home_mod_layer,
-// ╭─────┬─────┬─────┬─────┬─────┬─────╮   ╭─────┬─────┬─────┬─────┬─────┬─────╮
-     _x_   ___   ___   ___   ___   ___       ___   ___   ___   ___   ___   _x_  
-// ├─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
-     _x_   ___   LAT   LCT   LCM   ___       ___   ___   ___   ___   ___   _x_  
-// ├─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
-     _x_   ___   ___   ___   ___   ___       ___   ___   ___   ___   ___   _x_  
-// ╰─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────╯
+// ╭─────┬───────┬───────┬───────┬───────┬───────╮   ╭───────┬───────┬───────┬───────┬───────┬───────╮
+     _x_    ___     ___   ___   ___   ___       ___   ___   ___   ___   ___   _x_  
+// ├─────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────┤
+     _x_    ___   &kp LAT &kp LCT   LCM   ___       ___   ___   ___   ___   ___   _x_  
+// ├─────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────┤
+     _x_    ___     ___   ___   ___   ___       ___   ___   ___   ___   ___   _x_  
+// ╰─────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────╯
                        _x_   _x_   _x_       _x_   _x_   _x_ 
 //                   ╰─────┴─────┴─────╯   ╰─────┴─────┴─────╯
 )
@@ -133,3 +168,4 @@ ZMK_LAYER(right_home_mod_layer,
                        _x_   _x_   _x_       _x_   _x_   _x_ 
 //                   ╰─────┴─────┴─────╯   ╰─────┴─────┴─────╯
 )
+*/
