@@ -1,14 +1,5 @@
 #pragma once
 
-#define ALPH 0
-#define NUMB 1
-#define SMBL 2
-#define NAVG 3
-#define FUNC 4
-#define SYST 5
-#define LHRM 6
-#define RHRM 7
-
 #define GRV GRAVE
 #define XCL EXCL
 #define HSH HASH
@@ -43,13 +34,4 @@
 #define BLK SPACE
 
 #define _x_ &none
-
-#define BKSPs SYST BSPC
-#define TABs  SMBL TAB
-#define ESCs  NUMB ESC
-#define LHM   LHRM &none
-
-#define RETs NAVG RET
-#define DELs SYST DEL
-#define RHM  RHRM &none
 
