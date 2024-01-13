@@ -71,13 +71,19 @@ ZMK_BEHAVIOR(qlt, hold_tap,
     bindings = <&mo>, <&kp>;
 )
 
+ZMK_BEHAVIOR(lt_bl, hold_tap,
+    tapping-term-ms = <200>;
+    flavor = "balanced";
+    bindings = <&mo>, <&kp>;
+)
+
 ZMK_LAYER(typing_layer,
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮   ╭───────┬───────┬───────┬───────┬───────┬───────╮
       _x_    &kp Q   &kp W   &kp E   &kp R   &kp T       &kp Y   &kp U   &kp I   &kp O   &kp P    _x_ 
 // ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────┤
     &kp LSF  &kp A   &kp S   &kp D   &kp F   &kp G       &kp H   &kp J   &kp K   &kp L  &kp SMI &kp RSF  
 // ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────┤
-&lt LHRM _x_ &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &kp M  &kp CMM &kp DOT &kp FSL &lt RHRM _x_
+&lt_bl LHRM _x_ &kp Z &kp X  &kp C   &kp V   &kp B       &kp N   &kp M  &kp CMM &kp DOT &kp FSL &lt_bl RHRM _x_
 // ╰───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────╯
             &qlt SYST BSP &lt SMBL TAB &lt NUMB ESC     &lt NAVG RET &kp BLK &qlt SYST DEL 
 //                         ╰───────┴───────┴───────╯   ╰───────┴───────┴───────╯
