@@ -22,6 +22,7 @@
 #define LBK LBKT
 #define RBK RBKT
 #define EQU EQUAL
+#define MNS MINUS
 #define FSL FSLH
 #define BSL BSLH
 #define SMI SEMI
