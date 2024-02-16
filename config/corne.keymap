@@ -35,11 +35,13 @@ ZMK_BEHAVIOR(lt_bl, hold_tap,
 )
 
 ZMK_BEHAVIOR(LA, mod_morph2,
+    #binding-cells = <2>;
     bindings = <&kp>, <&kp>;
     mods = <(MOD_LSFT)>;
 )
 
 ZMK_BEHAVIOR(RA, mod_morph2,
+    #binding-cells = <2>;
     bindings = <&kp>, <&kp>;
     mods = <(MOD_RSFT)>;
 )
