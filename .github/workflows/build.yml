@@ -8,4 +8,6 @@ jobs:
   build_dvorak:
     if: github.ref == 'refs/heads/dvorak'
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      name: Corne_Dvorak-${{ github.run_number }}     
 
