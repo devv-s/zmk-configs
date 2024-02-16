@@ -6,8 +6,6 @@
 #define NAVG 3
 #define FUNC 4
 #define SYST 5
-#define LHRM 6
-#define RHRM 7
 
 #define GRV GRAVE
 #define XCL EXCL
@@ -42,6 +40,7 @@
 #define RSF RSHFT
 #define BSP BSPC
 #define BLK SPACE
+#define CPS CAPS
 
 #define _x_ &none
 
