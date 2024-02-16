@@ -34,11 +34,21 @@ ZMK_BEHAVIOR(lt_bl, hold_tap,
     bindings = <&mo>, <&kp>;
 )
 
+ZMK_BEHAVIOR(LA, mod_morph2,
+    bindings = <&kp>, <&kp>;
+    mods = <(MOD_LSFT)>;
+)
+
+ZMK_BEHAVIOR(RA, mod_morph2,
+    bindings = <&kp>, <&kp>;
+    mods = <(MOD_RSFT)>;
+)
+
 ZMK_LAYER(typing_layer,
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮   ╭───────┬───────┬───────┬───────┬───────┬───────╮
       _x_    &kp Q   &kp W   &kp E   &kp R   &kp T       &kp Y   &kp U   &kp I   &kp O   &kp P    _x_ 
 // ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────┤
-    &kp LSF  &kp A   &kp S   &kp D   &kp F   &kp G       &kp H   &kp J   &kp K   &kp L  &kp SMI &kp RSF  
+    &kp LSF  &kp A   &kp S &LA D LCT &kp F   &kp G       &kp H   &kp J   &kp K   &kp L  &kp SMI &kp RSF  
 // ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────┤
 &lt_bl LHRM _x_ &kp Z &kp X  &kp C   &kp V   &kp B       &kp N   &kp M  &kp CMM &kp DOT &kp FSL &lt_bl RHRM _x_
 // ╰───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────╯
