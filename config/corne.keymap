@@ -22,31 +22,6 @@
     chain-length = <27>;
 };
 
-
-/ {
-    behaviors {
-        swc: switch_key_with_ctrl {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-            keep_mods = <(MOD_LSFT)>;
-        };
-    };
-};
-
-/ {
-    behaviors {
-        swa: switch_key_with_alt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-            keep_mods = <(MOD_LSFT)>;
-        };
-    };
-};
-
 ZMK_BEHAVIOR(qlt, hold_tap,
     flavor = "tap-preferred";
     tapping-term-ms = <200>;
@@ -77,7 +52,7 @@ ZMK_LAYER(num_layer,
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮   ╭───────┬───────┬───────┬───────┬───────┬───────╮
    &to SYST  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5      &kp N6  &kp N7  &kp N8  &kp N9   _x_     _x_  
 // ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────┤
-      ___     ___     ___     ___     ___     ___        &kp N0  &kp N4  &kp N5  &kp N6   _x_     _x_  
+    &kp LSF   ___   &kp LCM &kp LAT &kp LCT   ___        &kp N0  &kp N4  &kp N5  &kp N6   _x_     _x_  
 // ├───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────┤
       ___     ___     ___     ___     ___     ___         _x_    &kp N1  &kp N2  &kp N3   _x_     _x_  
 // ╰───────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────╯
