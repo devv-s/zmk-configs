@@ -42,5 +42,12 @@
 #define BLK SPACE
 #define CPS CAPS
 
+#define VUP C_VOL_UP
+#define VDN C_VOL_DN
+#define VMT C_MUTE
+#define BUP C_BRI_UP
+#define BDN C_BRI_DN
+#define PSC PSCRN
+
 #define _x_ &none
 
