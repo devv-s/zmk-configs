@@ -30,13 +30,6 @@ ZMK_BEHAVIOR(qmt, hold_tap,
     bindings = <&kp>, <&kp>;
 )
 
-ZMK_BEHAVIOR(qmt2, hold_tap,
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <200>;
-    bindings = <&kp>, <&kp>;
-)
-
 ZMK_BEHAVIOR(qlt, hold_tap,
     flavor = "tap-preferred";
     tapping-term-ms = <200>;
@@ -47,18 +40,17 @@ ZMK_BEHAVIOR(qlt, hold_tap,
 #define SMBL_BSP &qlt SMBL BSP
 #define NUMB_ESC &lt NUMB ESC
 #define NAVG_RET &lt NAVG RET
-#define RCMD_BLK &mt RCMD BLK
 #define RAT_DEL &qmt RAT DEL
 
 ZMK_LAYER(typing_layer,
 // ╭───────────┬───────┬───────┬───────┬───────┬───────╮   ╭───────┬───────┬───────┬───────┬───────┬───────╮
-      &kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T       &kp Y   &kp U   &kp I   &kp O   &kp P    _x_  
+      &kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T       &kp Y   &kp U   &kp I   &kp O   &kp P  &kp RCMD
 // ├───────────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────┤
       &kp LSF    &kp A   &kp S   &kp D   &kp F   &kp G       &kp H   &kp J   &kp K   &kp L  &kp SMI &kp RSF  
 // ├───────────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────┤
     &mt LCT CPS  &kp Z   &kp X   &kp C   &kp V   &kp B       &kp N   &kp M  &kp CMM &kp DOT &kp FSL &kp RCT
 // ╰───────────┼───────┼───────┼───────┼───────┼───────┤   ├───────┼───────┼───────┼───────┼───────┼───────╯
-                               &kp LAT SMBL_BSP NUMB_ESC   NAVG_RET RCMD_BLK RAT_DEL 
+                               &kp LAT SMBL_BSP NUMB_ESC   NAVG_RET &kp BLK RAT_DEL 
 //                             ╰───────┴───────┴───────╯   ╰───────┴───────┴───────╯
 )
 
