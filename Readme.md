@@ -36,5 +36,5 @@ YES! And for me, by a far margin.
 ## To Do
 - [ ] Map mouse buttons.
 - [ ] Turn on the RGB if on System Layer for indication, if possible.
-- [ ] Tap and hold behavior for keys like backspace, space and delete if possible.
+- [x] Tap and hold behavior for keys like backspace, space and delete if possible.
 
