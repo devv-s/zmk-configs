@@ -47,7 +47,7 @@ ZMK_BEHAVIOR(qlt, hold_tap,
 #define SMBL_BSP &qlt SMBL BSP
 #define NUMB_ESC &lt NUMB ESC
 #define NAVG_RET &lt NAVG RET
-#define RCMD_BLK &qmt2 RCMD BLK
+#define RCMD_BLK &mt RCMD BLK
 #define RAT_DEL &qmt RAT DEL
 
 ZMK_LAYER(typing_layer,
